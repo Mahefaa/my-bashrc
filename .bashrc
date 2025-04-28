@@ -28,8 +28,10 @@ gjf() {
 }
 export -f gjf
 gitgjf () {
-        git diff --name-only --diff-filter=ACM | grep '\.java$' | xargs -I {} bash -c 'gjf "{}"'
-        git diff --cached --name-only --diff-filter=ACM | grep '\.java$' | xargs -I {} bash -c 'gjf "{}"'
-        git add .
+    { git diff --name-only --diff-filter=ACM; git diff --cached --name-only --diff-filter=ACM; } \
+        | grep '\.java$' \
+        | sort -u \
+        | xargs -r gjf --replace
+    git add .
 }
 export -f gitgjf
