@@ -62,7 +62,9 @@ No more messy diffs. Every commit: clean, formatted, professional.
 
 1. Append the content of `.bashrc` into your user profile:
 
-```wget -q -O - https://raw.githubusercontent.com/Mahefaa/my-bashrc/refs/heads/main/.bashrc && source ~/.bashrc```
+```
+wget -q -O - https://raw.githubusercontent.com/Mahefaa/my-bashrc/refs/heads/main/.bashrc && source ~/.bashrc
+```
 
 2. Place a `google-java-format` JAR file into your working directory.  
 Download it from [here](https://github.com/google/google-java-format/releases).
