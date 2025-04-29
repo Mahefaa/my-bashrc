@@ -60,23 +60,16 @@ No more messy diffs. Every commit: clean, formatted, professional.
 
 ## 🧠 Usage
 
-1. Clone this repository:
+1. Append the content of `.bashrc` into your user profile:
 
-```bash
-git clone https://github.com/your-username/my-bash-rc.git
+```
+wget -q -O - https://raw.githubusercontent.com/Mahefaa/my-bashrc/refs/heads/main/.bashrc && source ~/.bashrc
 ```
 
-2. Append the content of `.bashrc` into your user profile:
-
-```bash
-cat my-bash-rc/.bashrc >> ~/.bashrc
-source ~/.bashrc
-```
-
-3. Place a `google-java-format` JAR file into your working directory.  
+2. Place a `google-java-format` JAR file into your working directory.  
 Download it from [here](https://github.com/google/google-java-format/releases).
 
-4. Start formatting your Java files:
+3. Start formatting your Java files:
 
 ```bash
 gjf MyClass.java
